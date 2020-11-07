@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\AirportController.cs" />
+    <Compile Include="Controller\AirportFlightsController.cs" />
+    <Compile Include="Controller\AirportPilotsController.cs" />
+    <Compile Include="Controller\AirportPlanesController.cs" />
     <Compile Include="Model\PostModels\FlightPostModel.cs" />
     <Compile Include="Model\PostModels\PilotPostModel.cs" />
     <Compile Include="Model\PostModels\PlanePostModel.cs" />

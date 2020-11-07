@@ -12,7 +12,8 @@ namespace Airport3
     {
         static void Main(string[] args)
         {
-            var controller = new AirportController();
+            var controllerf = new AirportFlightsController();
+
             var flight = new FlightPostModel()
             {
                 FlightCity = "Kiev - New-York",
@@ -28,7 +29,7 @@ namespace Airport3
                 }
             };
 
-            controller.DeleteFlightById(1);
+            var flightcreate = controllerf.Create(flight);
 
         }
     }
