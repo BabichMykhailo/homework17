@@ -31,7 +31,7 @@ namespace Airport.Controller
             _airportPlanesService.DeleteById(id);
         }
 
-        public PlaneViewModel CreatePlane(PlanePostModel model)
+        public PlaneViewModel Create(PlanePostModel model)
         {
             var plane = _mapper.Map<PlaneModel>(model);
             var created = _airportPlanesService.Create(plane);

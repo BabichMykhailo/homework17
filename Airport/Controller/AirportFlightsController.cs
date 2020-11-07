@@ -33,7 +33,7 @@ namespace Airport.Controller
             _mapper = new Mapper(mapperConfig);
         }
 
-        public void DeleteFlightById(int id)
+        public void DeleteById(int id)
         {
             _airportFlightsService.DeleteById(id);
         }

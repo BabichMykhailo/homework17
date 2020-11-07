@@ -26,7 +26,7 @@ namespace Airport.Controller
             _mapper = new Mapper(mapperConfig);
         }
 
-        public PilotViewModel CreatePilot(PilotPostModel model)
+        public PilotViewModel Create(PilotPostModel model)
         {
             var pilot = _mapper.Map<PilotModel>(model);
             var created= _airportPilotsService.Create(pilot);
