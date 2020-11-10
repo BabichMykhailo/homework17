@@ -11,14 +11,14 @@ using Airport.Domain.Models;
 
 namespace Airport.Domain.Services
 {
-    public class AirportFlightsService
+    public class FlightsService
     {
-        private readonly AirportFlightsRepository _airportFlightsRepository;
+        private readonly FlightsRepository _airportFlightsRepository;
         private readonly IMapper _mapper;
-        public AirportFlightsService()
+        public FlightsService()
         {
 
-            _airportFlightsRepository = new AirportFlightsRepository();
+            _airportFlightsRepository = new FlightsRepository();
             var mapperConfig = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<FlightModel, Flight>();

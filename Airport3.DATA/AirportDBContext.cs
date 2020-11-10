@@ -14,9 +14,24 @@ namespace Airport.DATA
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Plane> Planes { get; set; }
 
-        public AirportDBContext() : base("Data Source=DESKTOP-0HLV6ID\\MSSQLSERVER03;Initial Catalog=AirportDB;Integrated Security=true")
+        public AirportDBContext() : base("Data Source=DESKTOP-0HLV6ID\\MSSQLSERVER03;Initial Catalog=AirportsDB;Integrated Security=true")
         {
             
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Flight>()
+                .HasRequired(x => x.Pilot)
+                .WithMany(x => x.Flights)
+                .HasForeignKey(x => x.PilotId);
+
+            modelBuilder.Entity<Flight>()
+                .HasRequired(x => x.Plane)
+                .WithMany(x => x.Flights)
+                .HasForeignKey(x => x.PlaneId);
         }
     }
 }

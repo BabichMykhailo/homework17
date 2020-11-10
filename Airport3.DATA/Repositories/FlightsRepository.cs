@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Airport.DATA.Repositories
 {
-    public class AirportFlightsRepository
+    public class FlightsRepository
     {
         private readonly AirportDBContext _ctx;
-        public AirportFlightsRepository()
+        public FlightsRepository()
         {
             _ctx = new AirportDBContext();
         }

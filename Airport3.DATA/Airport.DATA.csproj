@@ -52,17 +52,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AirportDBContext.cs" />
+    <Compile Include="Migrations\202011102022015_initial_create.cs" />
+    <Compile Include="Migrations\202011102022015_initial_create.designer.cs">
+      <DependentUpon>202011102022015_initial_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Flight.cs" />
     <Compile Include="Model\Plane.cs" />
     <Compile Include="Model\Pilot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\AirportFlightsRepository.cs" />
-    <Compile Include="Repositories\AirportPilotsRepository.cs" />
-    <Compile Include="Repositories\AirportPlanesRepository.cs" />
+    <Compile Include="Repositories\FlightsRepository.cs" />
+    <Compile Include="Repositories\PilotsRepository.cs" />
+    <Compile Include="Repositories\PlanesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011102022015_initial_create.resx">
+      <DependentUpon>202011102022015_initial_create.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

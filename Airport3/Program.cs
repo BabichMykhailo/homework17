@@ -12,7 +12,7 @@ namespace Airport3
     {
         static void Main(string[] args)
         {
-            var controllerf = new AirportFlightsController();
+            var controllerf = new FlightsController();
 
             var flight = new FlightPostModel()
             {

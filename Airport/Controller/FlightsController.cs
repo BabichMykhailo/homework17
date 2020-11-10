@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace Airport.Controller
 {
-    public class AirportFlightsController
+    public class FlightsController
     {
-        private readonly AirportFlightsService _airportFlightsService;
+        private readonly FlightsService _airportFlightsService;
         private readonly IMapper _mapper;
-        public AirportFlightsController()
+        public FlightsController()
         {
-            _airportFlightsService = new AirportFlightsService();
+            _airportFlightsService = new FlightsService();
             var mapperConfig = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<FlightPostModel, FlightModel>();

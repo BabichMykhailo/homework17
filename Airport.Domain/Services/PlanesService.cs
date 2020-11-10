@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace Airport.Domain.Services
 {
-    public class AirportPlanesService
+    public class PlanesService
     {
-        private readonly AirportPlanesRepository _airportPlanesRepository;
+        private readonly PlanesRepository _airportPlanesRepository;
         private readonly IMapper _mapper;
-        public AirportPlanesService()
+        public PlanesService()
         {
 
-            _airportPlanesRepository = new AirportPlanesRepository();
+            _airportPlanesRepository = new PlanesRepository();
             var mapperConfig = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<PlaneModel, Plane>();
