@@ -12,8 +12,7 @@ namespace Airport.Model.ViewModels
         public string FlightCity { get; set; }
         public DateTime FlightTime { get; set; }
 
-        public int PilotId { get; set; }
-        public PilotViewModel Pilot { get; set; }
+        public virtual IEnumerable<PilotViewModel> Pilots { get; set; }
 
         public int PlaneId { get; set; }
         public PlaneViewModel Plane { get; set; }

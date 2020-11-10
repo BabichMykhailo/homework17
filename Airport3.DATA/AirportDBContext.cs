@@ -24,11 +24,10 @@ namespace Airport.DATA
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Flight>()
-                .HasRequired(x => x.Pilot)
-                .WithMany(x => x.Flights)
-                .HasForeignKey(x => x.PilotId);
+                .HasMany(x => x.Pilots)
+                .WithMany(x => x.Flights);
 
-            modelBuilder.Entity<Flight>()
+            modelBuilder.Entity<Flight>() 
                 .HasRequired(x => x.Plane)
                 .WithMany(x => x.Flights)
                 .HasForeignKey(x => x.PlaneId);

@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202011102022015_initial_create.designer.cs">
       <DependentUpon>202011102022015_initial_create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011102053502_Added_Connection_One_To_Many.cs" />
+    <Compile Include="Migrations\202011102053502_Added_Connection_One_To_Many.designer.cs">
+      <DependentUpon>202011102053502_Added_Connection_One_To_Many.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Flight.cs" />
     <Compile Include="Model\Plane.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202011102022015_initial_create.resx">
       <DependentUpon>202011102022015_initial_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011102053502_Added_Connection_One_To_Many.resx">
+      <DependentUpon>202011102053502_Added_Connection_One_To_Many.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

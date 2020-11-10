@@ -12,8 +12,7 @@ namespace Airport.DATA.Model
         public string FlightCity { get; set; }
         public DateTime FlightTime { get; set; }
 
-        public int PilotId { get; set; }
-        public virtual Pilot Pilot { get; set; }
+        public virtual ICollection<Pilot> Pilots { get; set; }
 
         public int PlaneId { get; set; }
         public virtual Plane Plane { get; set; }

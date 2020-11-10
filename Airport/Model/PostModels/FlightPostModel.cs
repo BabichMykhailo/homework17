@@ -11,8 +11,7 @@ namespace Airport.Model.PostModels
         public string FlightCity { get; set; }
         public DateTime FlightTime { get; set; }
 
-        public int PilotId { get; set; }
-        public PilotPostModel Pilot { get; set; }
+        public virtual IEnumerable<PilotPostModel> Pilots { get; set; }
 
         public int PlaneId { get; set; }
         public PlanePostModel Plane { get; set; }
